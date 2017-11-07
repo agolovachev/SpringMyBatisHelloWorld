@@ -14,3 +14,5 @@ mvn cargo:run -P tomcat85
 Далее в адресной строке браузера введите
 
 http://localhost:8080/helloworld/
+
+Нажмите Ctrl-C, чтобы остановить сервер.
