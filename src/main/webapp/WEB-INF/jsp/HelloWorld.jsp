@@ -21,7 +21,7 @@
 <body>
 
 <div align="center">
-    <h2 class="h2" id="result">Push the button below to get "Hello World!" text</h2>
+    <h2 class="h2" id="result">Push the button below to get "Hello World!" text from DB</h2>
     <button onclick="doAjax()" title="Button" class="btn-success">Get data</button>
 </div>
 
