@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface HelloWorldMapper {
     @Select("select * from main_table")
-    Collection<String> getText();
+    String getText();
 }

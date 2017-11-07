@@ -1,25 +1,31 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Andrew
-  Date: 05.11.2017
-  Time: 17:10
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="/webjars/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
     <title>Hello World</title>
+    <script type="text/javascript">
+        function doAjax() {
+            $.ajax({
+                url: 'text',
+                type: 'GET',
+                success: function (data) {
+                    $("#result").text(data);
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 
-<script src="/webjars/jquery/3.2.1/jquery.min.js"></script>
-<script src="/webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-<div class="glyphicon-star">
-    <c:forEach items="${text}" var="t"><h2>${t}</h2></c:forEach>
+<div align="center">
+    <h2 class="h2" id="result">Push the button below to get "Hello World!" text</h2>
+    <button onclick="doAjax()" title="Button" class="btn-success">Get data</button>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

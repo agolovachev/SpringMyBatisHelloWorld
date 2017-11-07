@@ -18,7 +18,7 @@ public class HelloWorldService {
         this.helloWorldMapper = helloWorldMapper;
     }
 
-    public Collection<String> getText(){
+    public String getText(){
         return this.helloWorldMapper.getText();
     }
 }

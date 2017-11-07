@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -19,9 +20,13 @@ public class HelloWorldController {
     }
 
     @RequestMapping()
-    public ModelAndView getText() {
-        ModelAndView modelAndView = new ModelAndView("HelloWorld");
-        modelAndView.addObject("text", helloWorldService.getText());
-        return modelAndView;
+    public ModelAndView helloWorld() {
+        return new ModelAndView("HelloWorld");
+    }
+
+    @RequestMapping(value = "/text", method = RequestMethod.GET)
+    public @ResponseBody String getText() {
+        String result = helloWorldService.getText();
+        return result;
     }
 }
