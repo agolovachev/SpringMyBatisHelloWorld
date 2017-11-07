@@ -9,7 +9,7 @@ cd SpringMybatisHelloWorld
 
 mvn clean install
 
-mvn tomcat:run
+mvnw cargo:run -P tomcat85
 
 Далее в адресной строке браузера введите
 
