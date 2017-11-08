@@ -7,10 +7,14 @@
 
     <title>Hello World</title>
     <script type="text/javascript">
+
         function doAjax() {
             $.ajax({
                 url: 'text',
                 type: 'GET',
+                beforeSend: function () {
+                    $("#preloader").fadeIn
+                },
                 success: function (data) {
                     $("#result").text(data);
                 }
@@ -23,6 +27,7 @@
 <div align="center">
     <h2 class="h2" id="result">Push the button below to get "Hello World!" text from DB</h2>
     <button onclick="doAjax()" title="Button" class="btn-success">Get data</button>
+    <div id="preloader" class="default-preloader"></div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
