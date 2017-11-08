@@ -13,6 +13,6 @@ mvn cargo:run -P tomcat85
 
 Далее в адресной строке браузера введите
 
-http://localhost:8080/helloworld/
+http://localhost:8080/SpringMybatisHelloWorld/
 
 Нажмите Ctrl-C, чтобы остановить сервер.
