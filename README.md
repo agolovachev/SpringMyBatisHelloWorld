@@ -16,3 +16,6 @@ mvn cargo:run -P tomcat85
 http://localhost:8080/SpringMybatisHelloWorld/
 
 Нажмите Ctrl-C, чтобы остановить сервер.
+
+Возможные проблемы: Maven выдаёт ошибку при попытке сбилдить проект. 
+Убедитесь, что переменная среды JAVA_HOME ссылается на JDK, а не JRE.
